@@ -7,9 +7,8 @@ $sql = "update booking set status=3 where bid=".$bid;
 
 $conn->query($sql);
 
- header('location:viewbooking.php');
+ header('location:viewbookingnext.php');
 
 
 
 ?>
-

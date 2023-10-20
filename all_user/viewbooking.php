@@ -39,7 +39,6 @@ $name=$_SESSION['username'];
 <?php
     
     $actions=array(
-        'edit'=>array('label'=>'BOOK NOW','link'=>'booking.php','params'=>array('id'=>'bid'),'attributes'=>array('class'=>'btn btn-success')),
         'delete'=>array('label'=>'Delete','link'=>'itemdelete.php','params'=>array('id'=>'bid'),'attributes'=>array('class'=>'btn btn-success'))
     );
 
@@ -68,7 +67,7 @@ $name=$_SESSION['username'];
             </div>    
             <form action="" method="POST" enctype="multipart/form-data">
 
-<button class="btn btn-success" type="submit"  name="home" ><a href="viewbookingnext.php">Next</button>
+<button class="btn btn-success" type="submit"  name="home" ><a href="booking.php">Next</button>
 <button class="btn btn-success" type="submit" style="margin-right: 2px;"  name="book" ><a href="category_index.php">New Item</button>
 
 </form>    
