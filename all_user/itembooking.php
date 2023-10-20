@@ -77,7 +77,10 @@ if(!isset($_SESSION['username']))
 }
 
 }
-
+if(isset($_POST["btn_insert1"]))
+{
+    echo"<script >location.href = 'viewbookingnext.php'</script>";
+}
 ?>
 
 
@@ -137,6 +140,7 @@ if(isset($_SESSION['username']))
             </div>
             <div class="form-group form-button">
                     <button class="buttons" name="btn_insert" id="btn-1">Add to Cart</button>
+                    <button class="buttons" name="btn_insert1" id="btn-2">Book Now</button>
             </div>
             </form>      
         </div>
