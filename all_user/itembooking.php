@@ -136,7 +136,7 @@ if(isset($_SESSION['username']))
                 <input id="orderdate" name="orderdate" type="date"   style="margin-top: 8px;"><br>
             </div>
             <div class="form-group form-button">
-                    <button class="buttons" name="btn_insert" id="btn-1">View Booking</button>
+                    <button class="buttons" name="btn_insert" id="btn-1">Add to Cart</button>
             </div>
             </form>      
         </div>

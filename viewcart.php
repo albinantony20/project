@@ -1,8 +1,4 @@
 
-<?php
-include('user_header.php');
-?>
-
 <?php require('../config/autoload.php'); ?>
 
 <?php
@@ -11,7 +7,7 @@ $dao=new DataAccess();
 $name=$_SESSION['username'];
 
 ?>
-<?php include('userheader2.php'); ?>
+<?php include('afterlogin.php'); ?>
 
     
     <div class="container_gray_bg" id="home_feat_1">
@@ -20,18 +16,18 @@ $name=$_SESSION['username'];
             <div class="col-md-12">
                 <table  border="1" class="table" style="margin-top:100px;">
                     <tr>
-                        <h1><center> CART</center></h1>
+                        <h1><center> CART VIEW</center></h1>
                         
-                        <th>SR NO</th>
-                        <th>USERNAME</th>
-                        <th>ITEM ID</th>
-                        <th>ITEM NAME</th>
-                        <th>PRICE</th>
+                        <th>srno</th>
+                        <th>uemail</th>
+                        <th>iid</th>
+                        <th>iname</th>
+                        <th>price</th>
                        
-                        <th>QUANTITY</th>
-                        <th>TOTAL PRICE</th>
-                        <th>BOOKING DATE</th>
-                        <th>ORDER DATE</th>
+                        <th>quantity</th>
+                        <th>totalprice</th>
+                        <th>bookingdate</th>
+                        <th>orderdate</th>
                       
                         
 
@@ -39,8 +35,8 @@ $name=$_SESSION['username'];
 <?php
     
     $actions=array(
-        'edit'=>array('label'=>'BOOK NOW','link'=>'viewbookingnext.php','params'=>array('id'=>'bid'),'attributes'=>array('class'=>'btn btn-success')),
-        'delete'=>array('label'=>'Delete','link'=>'itemdelete.php','params'=>array('id'=>'bid'),'attributes'=>array('class'=>'btn btn-success'))
+        'edit'=>array('label'=>'booking','link'=>'booking.php','params'=>array('id'=>'bid'),'attributes'=>array('class'=>'btn btn-success')),
+        'delete'=>array('label'=>'Delete','link'=>'delete.php','params'=>array('id'=>'bid'),'attributes'=>array('class'=>'btn btn-success'))
     );
 
     $config=array(
@@ -66,15 +62,14 @@ $name=$_SESSION['username'];
              
                 </table>
             </div>    
-            <form action="" method="POST" enctype="multipart/form-data">
 
-<button class="btn btn-success" type="submit"  name="home" ><a href="viewbooking.php">Next</button>
-<button class="btn btn-success" type="submit" style="margin-right: 2px;"  name="book" ><a href="category_index.php">New Item</button>
+            
+        <form action="" method="POST" enctype="multipart/form-data">
+
+<button class="btn btn-success" type="submit"  name="home" ><a href="viewbooking.php">View Booking</button>
+<button class="btn btn-success" type="submit" style="margin-right: 2px;"  name="book" ><a href="home.php">Shop New Item</button>
 
 </form>    
-            
-            
-            
             
             
         </div><!-- End row -->
