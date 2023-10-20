@@ -79,7 +79,7 @@ if(!isset($_SESSION['username']))
 }
 if(isset($_POST["btn_insert1"]))
 {
-    echo"<script >location.href = 'viewbookingnext.php'</script>";
+    echo"<script >location.href = 'viewbooking.php'</script>";
 }
 ?>
 
@@ -138,10 +138,8 @@ if(isset($_SESSION['username']))
                 <label for="">orderdate</label><br>
                 <input id="orderdate" name="orderdate" type="date"   style="margin-top: 8px;"><br>
             </div>
-            <div class="form-group form-button">
-                    <button class="buttons" name="btn_insert" id="btn-1">Add to Cart</button>
-                    <button class="buttons" name="btn_insert1" id="btn-2">Book Now</button>
-            </div>
+                    <button class="btn btn-success" name="btn_insert" id="btn-1">Add to Cart</button>
+                    <button class="btn btn-success" name="btn_insert" id="btn-1">Book Now</button>
             </form>      
         </div>
         </div>
