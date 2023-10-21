@@ -78,6 +78,7 @@ $name=$_SESSION['username'];
                  $totall = $totall + $info[$i]["totalprice"];
                     
                 $i++;
+                $_SESSION['amount'] = $totall;
                     }
                  ?>
     TOTAL AMOUNT:
