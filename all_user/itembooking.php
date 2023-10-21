@@ -75,11 +75,39 @@ if(!isset($_SESSION['username']))
  echo"<script >location.href = 'viewbooking.php'</script>";
 
 }
+}
+
+if(isset($_POST["book_now"]))
+{
+if(!isset($_SESSION['username']))
+   {
+	   header('location:login.php');
+  }
+  else
+  { 
+    $uemail=$_SESSION['username'];
+    $iid = $_GET['id'];
+    $q="select * from item where item_id=".$iid ;
+    $info1=$dao->query($q);
+    $iname=$info1[0]["item_name"];
+    $price=$info1[0]["item_price"];
+    $quantity=$_POST["qty"];
+    $totalprice=$_POST["total"];
+    $_SESSION['amount']=$totalprice;
+
+    $bookingdate=date('Y-m-d',time());
+    $orderdate=$_POST["orderdate"];
+    
+   
+    $status=1;
+    $sql = "INSERT INTO booking(uemail,iid,iname,price,quantity,totalprice,bookingdate,orderdate,status) 
+    VALUES ('$uemail','$iid','$iname','$price','$quantity','$totalprice','$bookingdate','$orderdate','$status')";
+                                   
+    $conn->query($sql);
+    echo $sql;
+ echo"<script >location.href = 'viewbookingnext.php'</script>";
 
 }
-if(isset($_POST["btn_insert1"]))
-{
-    echo"<script >location.href = 'viewbooking.php'</script>";
 }
 ?>
 
@@ -138,8 +166,8 @@ if(isset($_SESSION['username']))
                 <label for="">orderdate</label><br>
                 <input id="orderdate" name="orderdate" type="date"   style="margin-top: 8px;"><br>
             </div>
-                    <button class="btn btn-success" name="btn_insert" id="btn-1">Add to Cart</button>
-                    <button class="btn btn-success" name="btn_insert" id="btn-1">Book Now</button>
+                    <button type="submit" class="btn btn-success" name="btn_insert">Add to Cart</button>
+                    <button type="submit" class="btn btn-success" name="book_now">Book Now</button>
             </form>      
         </div>
         </div>

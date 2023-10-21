@@ -13,6 +13,7 @@ $name=$_SESSION['username'];
 ?>
 <?php include('userheader2.php'); ?>
 
+
     
     <div class="container_gray_bg" id="home_feat_1">
     <div class="container">
@@ -40,7 +41,7 @@ $name=$_SESSION['username'];
     
     $actions=array(
        
-        'delete'=>array('label'=>'Delete','link'=>'itemdelete.php','params'=>array('id'=>'bid'),'attributes'=>array('class'=>'btn btn-success'))
+        'delete'=>array('label'=>'Delete','link'=>'itemdelete2.php','params'=>array('id'=>'bid'),'attributes'=>array('class'=>'btn btn-success'))
     );
 
     $config=array(
@@ -49,7 +50,7 @@ $name=$_SESSION['username'];
 
     );
 
-    $condition=" uemail='".$name."' and status=3";
+    $condition=" uemail='".$name."' and status=1";
     $join=array(
        
     ); 
@@ -67,8 +68,21 @@ $name=$_SESSION['username'];
                 </table>
             </div>    
             <form action="" method="POST" enctype="multipart/form-data">
-
-<button class="btn btn-success" type="submit"  name="home" ><a href="Payment.php">Payment</button>
+                    <?php           
+                 $q="select * from booking where status=1 AND uemail = '".$_SESSION['username']."';";
+                 $info=$dao->query($q);
+                 $i=0;       
+                 $totall = 0;  
+                 while($i<count($info))
+                    {
+                 $totall = $totall + $info[$i]["totalprice"];
+                    
+                $i++;
+                    }
+                 ?>
+    TOTAL AMOUNT:
+    <input type="text" value="<?php echo $totall; ?>" readonly name="total"/> 
+<button class="btn btn-success" type="submit"  name="home" ><a href="payment.php">Payment</button>
 <button class="btn btn-success" type="submit" style="margin-right: 2px;"  name="book" ><a href="category_index.php">Cancel</button>
 
 </form>    
