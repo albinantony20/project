@@ -75,6 +75,7 @@
                      <li><a href="viewitem.php"><i class="fa fa-object-group blue2_color"></i> <span>View Main Food</span></a></li>
                      <li><a href="special.php"><i class="fa fa-clone yellow_color"></i> <span>Add Special Food</span></a></li>
                      <li><a href="viewspcl.php"><i class="fa fa-object-group blue2_color"></i> <span>View Special Food</span></a></li>
+                     <li><a href="rptbookingdate.php"><i class="fa fa-clone yellow_color"></i> <span>View Booking</span></a></li>
                      <li>
                         <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>Elements</span></a>
                         <ul class="collapse list-unstyled" id="element">
