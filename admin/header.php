@@ -32,6 +32,29 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
       <![endif]-->
+      <!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- wow animation -->
+<script src="js/animate.js"></script>
+<!-- select country -->
+<script src="js/bootstrap-select.js"></script>
+<!-- owl carousel -->
+<script src="js/owl.carousel.js"></script> 
+<!-- chart js -->
+<script src="js/Chart.min.js"></script>
+<script src="js/Chart.bundle.min.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/analyser.js"></script>
+<!-- nice scrollbar -->
+<script src="js/perfect-scrollbar.min.js"></script>
+<script>
+   var ps = new PerfectScrollbar('#sidebar');
+</script>
+<!-- custom js -->
+<script src="js/custom.js"></script>
+<script src="js/chart_custom_style1.js"></script>
    </head>
    <body class="dashboard dashboard_1">
       <div class="full_container">
@@ -59,6 +82,7 @@
                   <h4>General</h4>
                   <ul class="list-unstyled components">
                      <li class="active">
+                        <?php /*
                         <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-dashboard green_color"></i> <span>Dashboard</span></a>
                         <ul class="collapse list-unstyled" id="dashboard">
                            <li>
@@ -69,13 +93,17 @@
                            </li>
                         </ul>
                      </li>
+                     */
+                    ?>
                      <li><a href="category.php"><i class="fa fa-clone yellow_color"></i> <span>Add Category</span></a></li>
                      <li><a href="viewcategory.php"><i class="fa fa-object-group blue2_color"></i> <span>View Category</span></a></li>
                      <li><a href="item.php"><i class="fa fa-clone yellow_color"></i> <span>Add Main Food</span></a></li>
                      <li><a href="viewitem.php"><i class="fa fa-object-group blue2_color"></i> <span>View Main Food</span></a></li>
                      <li><a href="special.php"><i class="fa fa-clone yellow_color"></i> <span>Add Special Food</span></a></li>
                      <li><a href="viewspcl.php"><i class="fa fa-object-group blue2_color"></i> <span>View Special Food</span></a></li>
+                     <li><a href="rptbookingdate.php"><i class="fa fa-bar-chart-o green_color"></i> <span>Datewise Report</span></a></li>
                      <li>
+                        <?php /*
                         <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>Elements</span></a>
                         <ul class="collapse list-unstyled" id="element">
                            <li><a href="general_elements.html">> <span>General Elements</span></a></li>
@@ -119,6 +147,8 @@
                      <li><a href="charts.html"><i class="fa fa-bar-chart-o green_color"></i> <span>Charts</span></a></li>
                      <li><a href="settings.html"><i class="fa fa-cog yellow_color"></i> <span>Settings</span></a></li>
                   </ul>
+                  */
+                  ?>
                </div>
             </nav>
             <!-- end sidebar -->
@@ -143,9 +173,6 @@
                                  <li>
                                     <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="images/logo/logo_icon.png" alt="#" /><span class="name_user">Admin</span></a>
                                     <div class="dropdown-menu">
-                                       <a class="dropdown-item" href="profile.html">My Profile</a>
-                                       <a class="dropdown-item" href="settings.html">Settings</a>
-                                       <a class="dropdown-item" href="help.html">Help</a>
                                        <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
                                     </div>
                                  </li>

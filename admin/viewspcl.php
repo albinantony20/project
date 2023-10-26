@@ -13,7 +13,7 @@ $dao=new DataAccess();
     <div class="container_gray_bg" id="home_feat_1">
     <div class="container">
     	<div class="row">
-            <div class="col-md-12">
+            <div class="col-md-11">
                 <table  border="1" class="table" style="margin-top:100px;">
                     <tr>
                         
