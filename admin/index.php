@@ -18,7 +18,7 @@ if(isset($_POST['login']))
 		if($info=$dao->login($data,$table))
 		{
 		$_SESSION['username']=$info['username'];
-		header('location:category.php');
+		header('location:header.php');
 		}
 		else
 		{
@@ -31,7 +31,7 @@ if(isset($_POST['login']))
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  	<title>ADMIN LOGIN</title>
+  	<title>Admin Login</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
