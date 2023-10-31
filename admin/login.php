@@ -1,7 +1,6 @@
 <?php require('../config/autoload.php'); ?>
 <?php
 $dao=new DataAccess();
-
 $rules=array(
 	'username'=>array('required'=>true),
 	'password'=>array('required'=>true)
@@ -15,11 +14,11 @@ if(isset($_POST['signin']))
 		'username'=>$_POST['username'],
 		'password'=>$_POST['password']
 		);
-		$table='admin';
-		if($info=$dao->login($data,$table))
+		$table='login';
+		if($info=$dao->index($data,$table))
 		{
 		$_SESSION['username']=$info['username'];
-		header('location:parlour.php');
+		header('location:index.php');
 		}
 		else
 		{
@@ -35,7 +34,7 @@ if(isset($_POST['signin']))
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign Up </title>
+    <title>SIGN IN</title>
 
     <!-- Font Icon -->
     <link rel="stylesheet" href="registration/fonts/material-icon/css/material-design-iconic-font.min.css">
@@ -50,13 +49,13 @@ if(isset($_POST['signin']))
         <section class="sign-in">
             <div class="container">
                 <div class="signin-content">
-                    <div class="salon-signup">
-                        <figure><img src="registration/images/salon-signup.jpg" alt="sing up image"></figure>
-              
+                    <div class="signin-image">
+                        <figure><img src="registration/images/signin-image.jpg" alt="sing up image"></figure>
+                        <a href="register.php" class="signup-image-link">Create an account</a>
                     </div>
 
                     <div class="signin-form">
-                        <h2 class="form-title">Sign up</h2>
+                        <h2 class="form-title">SIGN IN</h2>
                         <form method="POST" class="register-form" id="login-form">
                             <div class="form-group">
                                 <!--<label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
@@ -76,10 +75,17 @@ if(isset($_POST['signin']))
                             </div>
                             <div class="form-group form-button">
                                 <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
-                               
+                                <a href="index.php">Back to Home</a>
                             </div>
                         </form>
-                        
+                        <div class="social-login">
+                            <span class="social-label">Or login with</span>
+                            <ul class="socials">
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -99,7 +99,7 @@ if(isset($_POST['signin']))
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
 <html>
-<!--
+
 			<head>
 <style>
 	body{background-image:url("img.jpg");  
@@ -133,4 +133,4 @@ if(isset($_POST['signin']))
 		</table>
 	</form>
 	</body>
-</html>-->
+</html>
