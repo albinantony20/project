@@ -1,29 +1,24 @@
-
-<?php
-include('user_header.php');
-?>
-
 <?php require('../config/autoload.php'); ?>
 
 <?php
 $dao=new DataAccess();
 
-$name=$_SESSION['username'];
+
 
 ?>
-<?php include('userheader2.php'); ?>
+<?php include('header.php'); ?>
 
     
-    <div class="container_gray_bg" id="home_feat_1">
+<div class="container_gray_bg" id="home_feat_1">
     <div class="container">
     	<div class="row">
-            <div class="col-md-12">
+            <div class="col-md-11">
                 <table  border="1" class="table" style="margin-top:100px;">
                     <tr>
-                        <h1><center> CART</center></h1>
+                       
                         
                         <th>SR NO</th>
-                        <th>USERNAME</th>
+                        <th>USER NAME</th>
                         <th>ITEM ID</th>
                         <th>ITEM NAME</th>
                         <th>PRICE</th>
@@ -39,7 +34,8 @@ $name=$_SESSION['username'];
 <?php
     
     $actions=array(
-        'delete'=>array('label'=>'Delete','link'=>'itemdelete.php','params'=>array('id'=>'bid'),'attributes'=>array('class'=>'btn btn-success'))
+        
+        //'delete'=>array('label'=>'Deliver','link'=>'cancel.php','params'=>array('id'=>'bid'),'attributes'=>array('class'=>'btn btn-success'))
     );
 
     $config=array(
@@ -48,13 +44,13 @@ $name=$_SESSION['username'];
 
     );
 
-    $condition=" uemail='".$name."' and status=1";
+    $condition="status=3";
     $join=array(
        
     ); 
      $fields=array('bid','uemail','iid','iname','price','quantity','totalprice','bookingdate','orderdate');
 
-     $users=$dao->selectAsTable($fields,'booking','status=1',$join,$actions,$config);
+    $users=$dao->selectAsTable($fields,'booking as b',$condition,NULL,$actions,$config);
     
     echo $users;
                     
@@ -64,14 +60,8 @@ $name=$_SESSION['username'];
 ?>
              
                 </table>
+                
             </div>    
-            <form action="" method="POST" enctype="multipart/form-data">
-
-<button class="btn btn-success" type="submit"  name="home" ><a href="viewbookingnext.php">Next</button>
-<button class="btn btn-success" type="submit" style="margin-right: 2px;"  name="book" ><a href="category_index.php">New Item</button>
-
-</form>    
-            
             
             
             

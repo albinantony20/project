@@ -123,6 +123,7 @@
                      </li>
                      
 
+                     <li><a href="viewbooking.php"><i class="fa fa-bar-chart-o blue1_color"></i> <span>View Booking</span></a></li>
                      <li><a href="rptbookingdate.php"><i class="fa fa-bar-chart-o green_color"></i> <span>Datewise Report</span></a></li>
                      <li><a href="index.php"><i class="fa fa-clock-o orange_color"></i> <span>Logout</span></a></li>
                      

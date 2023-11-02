@@ -3,7 +3,9 @@
 include('user_header.php');
 ?>
 
-<?php require('../config/autoload.php'); ?>
+<?php require('../config/autoload.php');
+include("dbcon.php");
+ ?>
 
 <?php
 $dao=new DataAccess();
@@ -61,7 +63,12 @@ $name=$_SESSION['username'];
     echo $users;
                     
                     
-                   
+                   if(isset($_POST['home']))
+                   {
+                    $bid = $_GET['id'];
+                    $sql = "update booking set status=3 where  bid=".$bid;
+                    header('location:payment.php');
+                   }
     
 ?>
              

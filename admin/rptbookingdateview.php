@@ -58,7 +58,7 @@ $dao=new DataAccess();
         
     );
 
-   $condition="orderdate='".$date1."' and status=1";
+   $condition="orderdate='".$date1."' and status=2";
    
    $join=array(
        
