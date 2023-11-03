@@ -1,6 +1,15 @@
 
 <?php
-include('header.php');
+require('../config/autoload.php');
+if(isset($_SESSION['username']))
+{ 
+	include('user_header.php');
+	$name=$_SESSION['username'];
+}else{
+	$name= '';
+	include("header.php");
+	
+}
 ?>
 
 

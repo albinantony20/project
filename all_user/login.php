@@ -18,6 +18,9 @@ if(isset($_POST['signin']))
 		if($info=$dao->login($data,$table))
 		{
 		$_SESSION['username']=$info['username'];
+        $_SESSION['uemail']=$info['username'];
+        if(isset($_SESSION['view']))
+        header('location:category_index.php');
 		header('location:index.php');
 		}
 		else

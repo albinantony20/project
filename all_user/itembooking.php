@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php 
+ require('../config/autoload.php'); 
+ $_SESSION['view']='view';
+if(!isset($_SESSION['username']))
+{ 
+header('location:register.php');
+}
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport">
@@ -8,7 +15,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="ui.css">
     
-<?php
+    <?php
+   
 include('user_header.php');
 ?>
     <script>
@@ -27,7 +35,6 @@ include('user_header.php');
 <body>
 <?php
 
-require('../config/autoload.php'); 
 //include("header.php");	
 include("dbcon.php");
 

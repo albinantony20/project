@@ -1,9 +1,9 @@
 
+<?php require('../config/autoload.php');?>
 <?php
 include('user_header.php');
-?>
 
-<?php require('../config/autoload.php');
+
 include("dbcon.php");
  ?>
 
@@ -52,7 +52,7 @@ $name=$_SESSION['username'];
 
     );
 
-    $condition=" uemail='".$name."' and status=1";
+    $condition=" uemail='".$_SESSION['username']."' and status=1";
     $join=array(
        
     ); 
@@ -67,7 +67,8 @@ $name=$_SESSION['username'];
                    {
                     $bid = $_GET['id'];
                     $sql = "update booking set status=3 where  bid=".$bid;
-                    header('location:payment.php');
+                    $info=$dao->query($sql);
+                    echo "<script>location.replace('payment.php');</script>";
                    }
     
 ?>
@@ -90,7 +91,7 @@ $name=$_SESSION['username'];
                  ?>
     TOTAL AMOUNT:
     <input type="text" value="<?php echo $totall; ?>" readonly name="total"/> 
-<button class="btn btn-success" type="submit"  name="home" ><a href="payment.php">Payment</button>
+<button class="btn btn-success" type="submit"  name="home" >Payment</button>
 <button class="btn btn-success" type="submit" style="margin-right: 2px;"  name="book" ><a href="category_index.php">Cancel</button>
 
 </form>    

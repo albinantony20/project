@@ -1,29 +1,32 @@
 
 
-<?php include("user_header.php");	?>
-
-
-
 <?php require('../config/autoload.php'); ?>
+<?php //include("user_header.php");	?>
+
+
+
 
 <?php
 $dao=new DataAccess();
 ?>
 	
-	<div class="plans-section" id="rooms">
-				 <div class="container">
+	
 <?php				 
 if(isset($_SESSION['username']))
 { 
-	include("userheader2.php");
-   $name=$_SESSION['username'];
+	include('user_header.php');
+	
+}else{
+
+	include("header.php");
+	
 }
-else
 
 ?>
 
-
-<?php } ?>
+<div class="plans-section" id="rooms">
+				 <div class="container">
+<?php  ?>
 <h3 class="title-w3-agileits title-black-wthree">ITEMS</h3>
 						<div class="priceing-table-main">
             <?php

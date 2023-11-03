@@ -27,7 +27,7 @@ $dao=new DataAccess();
 if(isset($_SESSION['username']))
 { 
 	include('user_header.php');
-	include('userheader2.php');
+	
 }else{
 
 	include("header.php");
@@ -39,7 +39,7 @@ if(isset($_SESSION['username']))
  //<h7 class="title-w3-agileits title-black-wthree"> ?>
 	<?php  //echo $name </h7> ?>
 
-<?php?>
+
 
 <div class="plans-section" id="rooms">
 				 <div class="container">
