@@ -1,0 +1,31 @@
+
+#sidebar ul.components ul {
+    background: #fff;
+    padding: 0;
+}
+
+#sidebar ul.components li ul li a {
+    border-top: solid #ddd 1px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+ 
+#sidebar ul.components ul li a {
+    color: #333;
+}
+
+#sidebar ul.components ul li a:hover {
+    color: #0971b8;
+}
+
+.dark_bg {
+    background: #0971b8;
+}
+
+.progress.skill-bar .progress-bar {
+    background-color: #0971b8;
+}
+
+.dash_head {
+    background-color: #0971b8;
+}

@@ -18,7 +18,7 @@ if(isset($_POST['login']))
 		if($info=$dao->login($data,$table))
 		{
 		$_SESSION['username']=$info['username'];
-		header('location:header.php');
+		header('location:dashboard.php');
 		}
 		else
 		{

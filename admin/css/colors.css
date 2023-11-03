@@ -1,3 +1,27 @@
+/*------------------------------------------------------------------
+    File Name: color_2.css
+-------------------------------------------------------------------*/
+
+
+.sidebar_toggle {
+    background: #0971b8;
+}
+
+.icon_info ul.user_profile_dd > li {
+    background: #0971b8;
+}
+
+
+.counter_section .counter_no p.total_no {
+    color: #fff;
+}
+
+.counter_section .counter_no p.head_couter {
+    color: rgba(255,255,255,.7);
+}
+
+
+
 
 #sidebar ul.components ul {
     background: #fff;
@@ -10,6 +34,8 @@
     padding-bottom: 12px;
 }
  
+
+
 #sidebar ul.components ul li a {
     color: #333;
 }
@@ -17,6 +43,7 @@
 #sidebar ul.components ul li a:hover {
     color: #0971b8;
 }
+
 
 .dark_bg {
     background: #0971b8;

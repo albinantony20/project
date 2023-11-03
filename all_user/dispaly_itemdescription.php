@@ -17,6 +17,9 @@ if(isset($_SESSION['username']))
 { 
 	include("userheader2.php");
    $name=$_SESSION['username'];
+}
+else
+
 ?>
 
 

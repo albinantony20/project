@@ -51,28 +51,35 @@ if($validator->validate($_POST))
 </head>
 <body>
 
- <form action="" method="POST" >
- 
-
-
-<div class="row">
-                    <div class="col-md-6">
-                        <br>
-            
-From Date:
-<br>
+<form action="" method="POST" enctype="multipart/form-data">
+ <div class="midde_cont">
+                  <div class="container-fluid">
+                     <div class="row column_title">
+                        <div class="col-md-12">
+                           <div class="page_title">
+                              <h2>Datewise Report</h2>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- row -->
+                     <div class="row column">
+                        <div class="col-md-12">
+                           <div class="white_shd full margin_bottom_30">
+                              <div class="full graph_head">
+                                 <div class="heading1 margin_0">
+                                    <h2>Orders</h2>
+                                 </div>
+                              </div>
+                              <div class="full price_table padding_infor_info">
+                              <div class="row">
+                                 <div class="col-md-6">
+                                   <div class="contact_blog">
+                                      <h4 class="brief">From Specific Date</h4>
 <?= $form->inputBox('fdate',array('class'=>'form-control'),"date") ?>
 <span style="color:red;"><?= $validator->error('fdate'); ?></span>
 
-
-</div>
-</div>
-
-
-
-
-
-<button type="submit" name="btn_insert"  >Submit</button>
+<br>
+<button type="submit" class="btn btn-success" name="btn_insert"  >Submit</button>
 </form>
 
 

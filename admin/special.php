@@ -81,40 +81,57 @@ echo $file->errors();
 </head>
 <body>
 
- <form action="" method="POST" enctype="multipart/form-data">
-<br>
-<div class="row">
-                    <div class="col-md-6">
-Special Food Name:
+<form action="" method="POST" enctype="multipart/form-data">
+ <div class="midde_cont">
+                  <div class="container-fluid">
+                     <div class="row column_title">
+                        <div class="col-md-12">
+                           <div class="page_title">
+                              <h2>Special Food</h2>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- row -->
+                     <div class="row column">
+                        <div class="col-md-12">
+                           <div class="white_shd full margin_bottom_30">
+                              <div class="full graph_head">
+                                 <div class="heading1 margin_0">
+                                    <h2>Add Special Food</h2>
+                                 </div>
+                              </div>
+                           <div class="full price_table padding_infor_info">
+                              <div class="row">
+                                 <div class="col-md-6">
+                                   <div class="contact_blog">
+                                      <h4 class="brief">Item Name</h4>
 
 <?= $form->textBox('spname',array('class'=>'form-control')); ?>
 <?= $validator->error('spname'); ?>
 
-</div>
-</div>
+
+
 <br>
-<div class="row">
-                    <div class="col-md-6">
-Special Food Image:
+<h4 class="brief">Item Image</h4>
 
 <?= $form->fileField('spimage',array('class'=>'form-control')); ?>
 <span style="color:red;"><?= $validator->error('spimage'); ?></span>
 
-</div>
-</div>
-<div class="row">
-                    <div class="col-md-6">
-Special Food Price:
+
+<br>
+<h4 class="brief">Item Price</h4>
 
 <?= $form->textBox('spprice',array('class'=>'form-control')); ?>
 <?= $validator->error('spprice'); ?>
 
-</div>
-</div>
-<br>
-<button type="submit" name="insert">Submit</button>
-</form>
 
+<br>
+<button type="submit" class="btn btn-success" name="insert">Submit</button>
+</form>
+</div>
+                              </div>
+                           </div>
+                        </div>
 
 </body>
 

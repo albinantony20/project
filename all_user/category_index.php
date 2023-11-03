@@ -1,6 +1,6 @@
 
 <?php
-include('user_header.php');
+
 ?>
 
 
@@ -23,23 +23,28 @@ $dao=new DataAccess();
 
 
 	
-	<div class="plans-section" id="rooms">
-				 <div class="container">
 <?php    
 if(isset($_SESSION['username']))
 { 
-	include("userheader2.php");
-   $name=$_SESSION['username'];
+	include('user_header.php');
+	include('userheader2.php');
+}else{
+
+	include("header.php");
+	
+}
 
 ?>
 <?php 
  //<h7 class="title-w3-agileits title-black-wthree"> ?>
 	<?php  //echo $name </h7> ?>
 
-<?php } ?>
+<?php?>
+
+<div class="plans-section" id="rooms">
+				 <div class="container">
 			<br>
-				 <h3 class="title-w3-agileits title-black-wthree">CATEGORY</h3><h3><center>
-					<a href="user_index.php" >Recommended Foods</a></h3></center><br><br>
+				 <h3 class="title-w3-agileits title-black-wthree">CATEGORY</h3>
 						<div class="priceing-table-main">
             <?php
 			
@@ -56,7 +61,7 @@ $info=$dao->query($q);
 		?>		 <div class="col-md-3 price-grid">
 					<div class="price-block agile">
 						<div class="price-gd-top">
-						<img style="width:300; height:300" src=<?php echo BASE_URL."uploads/".$info[$i]["cimage"]; ?> alt=" " class="img-responsive" />
+						<img width="300px" src=<?php echo BASE_URL."uploads/".$info[$i]["cimage"]; ?> alt=" " class="img-responsive" />
 							<?php /*?> <h4>Deluxe Room</h4><?php */?>
                               <h4><?php echo $info[$i]["cname"]?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4> 
                               <br><br><br><h4></h4> 
@@ -84,7 +89,8 @@ $info=$dao->query($q);
 				<?php 
 				$i++;
 				} ?>
-				<div class="clearfix"> </div>
+				<div class="clearfix"> </div><h3><center>
+				 <a href="special_index.php" >Special Foods>>></a></h3></center><br><br>
 			</div>
 		</div>
 	</div>
@@ -120,7 +126,7 @@ $info=$dao->query($q);
 					<div class="overflow-hidden">
 						<h4>Email</h4>
 						<p class="lead">
-							catering@gmail.com
+							heavenscatering@gmail.com
 						</p>
 					</div>
 				</div>
@@ -129,7 +135,7 @@ $info=$dao->query($q);
 					<div class="overflow-hidden">
 						<h4>Location</h4>
 						<p class="lead">
-							 Nedumbassery, Kerala 683587
+							 Angamaly,Aluva Rd Kerala 683587
 						</p>
 					</div>
 				</div>

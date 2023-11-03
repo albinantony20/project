@@ -540,7 +540,7 @@ label.valid {
     margin-right: 0px;
     padding-left: 0px;
     /* box-sizing: border-box; */
-    padding: 0 30px; }
+    padding: 0px; }
 
   .signin-image {
     margin-left: 0px;
@@ -588,5 +588,6 @@ label.valid {
   .social-label {
     margin-right: 0px;
     margin-bottom: 10px; } }
+
 
 /*# sourceMappingURL=style.css.map */

@@ -45,17 +45,18 @@ if(isset($_POST['signup']))
 		else
 			echo "<script> alert('Something went wrong');</script> ";
 		//$msg="error";
-		header('location:index.php');	
+		header('location:login.php');	
 	}
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SIGN UP </title>
+    <title>Register</title>
 
     <!-- Font Icon -->
     <link rel="stylesheet" href="registration/fonts/material-icon/css/material-design-iconic-font.min.css">
@@ -72,32 +73,28 @@ if(isset($_POST['signup']))
             <div class="container">
                 <div class="signup-content">
                     <div class="signup-form">
-                        <h2 class="form-title">SIGN UP</h2>
+                        <h2 class="form-title">Register</h2>
                         <form method="POST" class="register-form" id="register-form">
                             <div class="form-group">
-                               <!-- <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="name" id="name" placeholder="Your Name"/>--><h5>NAME:<?php echo $form->textBox('name'); ?> </h5>
-			<?php echo $validator->error('name') ?>
+                               <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="name" id="name" placeholder="Your Name" required/>
+			                    <?php echo $validator->error('name') ?>
                             </div>
                             <div class="form-group">
-                               <!-- <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                <input type="email" name="email" id="email" placeholder="Your Email"/>--><h5>USER NAME:<?php echo $form->textBox('username'); ?> </h5>
-			<?php echo $validator->error('username') ?>
+                                <label for="username"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="username" id="username" placeholder="Your Username" required/>
+			                    <?php echo $validator->error('username') ?>
                             </div>
                             <div class="form-group">
-                               <!-- <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="pass" id="pass" placeholder="Password"/>--><h5>PASSWORD:<?php echo $form->passwordBox ('password'); ?></h4>
-			<?php echo $validator->error('password') ?>
+                                <label for="contact"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="number" name="contact" id="contact" placeholder="Your Phone Number" required/>
+                                <?php echo $validator->error('contact') ?>
                             </div>
                             <div class="form-group">
-                               <!-- <label for="number"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="number" name="number" id="number" placeholder="Your Contact Number"/>--><h5>CONTACT NO:<?php echo $form->textBox('contact'); ?> </h5>
-			<?php echo $validator->error('contact') ?>
+                                <label for="password"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="password" id="password" placeholder="Password" required/>
+			                    <?php echo $validator->error('password') ?>
                             </div>
-                           <!-- <div class="form-group">
-                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"/>
-                            </div>-->
                             <div class="form-group">
                                 <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
                                 <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
@@ -109,61 +106,20 @@ if(isset($_POST['signup']))
                         </form>
                     </div>
                     <div class="signup-image">
-                        <figure><img src="registration/images/signup-image.jpg" alt="sing up image"></figure>
-                        <a href="login.php" class="signup-image-link">I am already member</a><a href="index.php" class="signup-image-link">Back to Home</a>
+                        <figure><img src="registration/images/heavens.png" alt="sign up image"></figure>
+                        <a href="login.php" class="signup-image-link">I am already member</a>
+                        <a href="index.php" class="signup-image-link">Back to Home</a>
                     </div>
                 </div>
             </div>
         </section>
-        </div>
+
+
+
+    </div>
 
     <!-- JS -->
-    <script src="registration/vendor/jquery/jquery.min.js"></script>
+    <script src="reistration/vendor/jquery/jquery.min.js"></script>
     <script src="registration/js/main.js"></script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
-<!--<html>
-
-            		<head>
-<style>
-	body{background-image:url("user.png");  
-		background-position: top;
-    
-  		background-repeat: no-repeat;
-  		background-size: cover;
-		}
-</style>
-	</head>
-	<body>
-<form method="POST">
-				<center>
-			<table  style="margin-top:100px;">
-           
-			<tr><h1>REGISTER DETAILS</h1></tr>
-                	<tr>
-			<td><h4>NAME:<?php echo $form->textBox('name'); ?> </h4><br/></td>
-			<td><?php echo $validator->error('name') ?></td>
-			</tr>
-			<tr>
-			<td><h4>USER NAME:<?php echo $form->textBox('username'); ?> </h4><br/></td>
-			<td><?php echo $validator->error('username') ?></td>
-			</tr>
-			<tr>
-			
-			<td><h4>PASSWORD:<?php echo $form->passwordBox ('password'); ?></h4> <br/></td>
-			<td><?php echo $validator->error('password') ?></td>
-			</tr>
-			
-			<tr>
-			<td></td>
-                <td><h4><input type="submit" name="submit" value="REGISTER"/></h4></td>
-			<td> <?php if(isset($msg))echo $msg; 
-	?></td>
-			</tr>
-		</table>
-				</center>
-		<div style="color:green;"></div>	
-		</form>
-    </body>
-</html>-->
- <?php //include('footer.php'); ?>
