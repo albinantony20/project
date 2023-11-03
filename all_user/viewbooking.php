@@ -1,9 +1,9 @@
 
+<?php require('../config/autoload.php'); ?>
 <?php
 include('user_header.php');
 ?>
 
-<?php require('../config/autoload.php'); ?>
 
 <?php
 $dao=new DataAccess();
@@ -54,7 +54,7 @@ $name=$_SESSION['username'];
     ); 
      $fields=array('bid','uemail','iid','iname','price','quantity','totalprice','bookingdate','orderdate');
 
-     $users=$dao->selectAsTable($fields,'booking','status=1',$join,$actions,$config);
+     $users=$dao->selectAsTable($fields,'booking','status=1 and ',$join,$actions,$config);
     
     echo $users;
                     
