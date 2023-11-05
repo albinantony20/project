@@ -7,41 +7,43 @@ include("dbcon.php");
 ?>
 
 <?php
-//session_start();
-$dao=new DataAccess();
-   $date1=$_SESSION['fdate'] ;
- $date2=$_SESSION['fdate'] ;
-   if(isset($_POST["purchase"]))
-{
-     header('location:oghead.php');
-}
 
-	 
-	   
-	    ?>
-       
-       
-       
-       
- <div class="container_gray_bg" id="home_feat_1">
-    <div class="container">
-    	<div class="row">
-            <div class="col-md-11">
-            
-            <?php
-            // <H1><center> BOOKING DETAILS </center> </H1>
-            ?>
-                <table  border="1" class="table" style="margin-top:100px;">
-                    <tr>
-                        
-                        <th>S NO</th>
-                        <th>ITEM NAME</th>
-                        <th>BOOKING DATE</th>
-                         <th>QUANTITY</th>
-                     
-                      
-                      
-                    </tr>
+$dao=new DataAccess();
+$date1=$_SESSION['fdate'] ;
+ $date2=$_SESSION['fdate'] ;
+
+?>
+<div class="midde_cont">
+                  <div class="container-fluid">
+                     <div class="row column_title">
+                        <div class="col-md-12">
+                           <div class="page_title">
+                              <h2>Datewise Report</h2>
+                           </div>
+                        </div>
+                     </div>
+<div class="row column1">
+                        <div class="col-md-12">
+                           <div class="white_shd full margin_bottom_30">
+                              <div class="full graph_head">
+                                 <div class="heading1 margin_0">
+                                    <h2>Orders</h2>
+                                 </div>
+                              </div>
+                              <div class="full price_table padding_infor_info">
+                                 <div class="row">
+                                    <div class="col-lg-12">
+                                       <div class="table-responsive-sm">
+                                          <table class="table table-striped projects">
+                                             <thead class="thead-dark">
+                                                <tr>
+                                                   <th>S No</th>
+                                                   <th>Item  Name</th>
+                                                   <th>Booking Date</th>
+                                                   <th>Order Date</th>
+                                                   <th>Quantity</th>
+                                                </tr>
+                                             </thead>
 <?php
     
     $actions=array(
@@ -58,14 +60,14 @@ $dao=new DataAccess();
         
     );
 
-   $condition="orderdate='".$date1."' and status=2";
+   $condition="bookingdate>='".$date1."' and status=3";
    
    $join=array(
        
     );  
-	$fields=array('bid','iname','bookingdate','quantity');
+	$fields=array('bid','iname','bookingdate','orderdate','quantity');
 
-    $users=$dao->selectAsTable($fields,'booking as c',$condition,$join,$actions,$config);
+    $users=$dao->selectAsTable($fields,'booking',$condition,$join,$actions,$config);
     
     echo $users;
                                      
@@ -84,11 +86,24 @@ $dao=new DataAccess();
 ?>
 
 </form>
-</div>
+</table>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+    
+
+
+             
+                </table>
+            </div>    
 
             
             
             
+         
         </div><!-- End row -->
     </div><!-- End container -->
     </div><!-- End container_gray_bg -->

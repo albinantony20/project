@@ -1,9 +1,9 @@
 
+<?php require('../config/autoload.php');?>
 <?php
 include('user_header.php');
-?>
 
-<?php require('../config/autoload.php');
+
 include("dbcon.php");
  ?>
 
@@ -11,6 +11,23 @@ include("dbcon.php");
 $dao=new DataAccess();
 
 $name=$_SESSION['username'];
+
+
+
+   
+if(isset($_POST['home']))
+{
+ $bid = $_SESSION['uemail'];
+
+ $data=array(
+    'status'=>3
+ );
+ $sql = "update booking set status=3 where status=1 and  uemail=".$bid;
+ $dao->update($data,'booking','status=1 and  uemail="'.$bid.'"');
+ 
+ echo "<script>location.replace('payment.php');</script>";
+}
+
 
 ?>
 <?php include('userheader2.php'); ?>
@@ -52,7 +69,7 @@ $name=$_SESSION['username'];
 
     );
 
-    $condition=" uemail='".$name."' and status=1";
+    $condition=" uemail='".$_SESSION['username']."' and status=1";
     $join=array(
        
     ); 
@@ -62,13 +79,7 @@ $name=$_SESSION['username'];
     
     echo $users;
                     
-                    
-                   if(isset($_POST['home']))
-                   {
-                    $bid = $_GET['id'];
-                    $sql = "update booking set status=3 where  bid=".$bid;
-                    header('location:payment.php');
-                   }
+                 
     
 ?>
              
@@ -80,17 +91,20 @@ $name=$_SESSION['username'];
                  $info=$dao->query($q);
                  $i=0;       
                  $totall = 0;  
-                 while($i<count($info))
-                    {
-                 $totall = $totall + $info[$i]["totalprice"];
-                    
-                $i++;
-                $_SESSION['amount'] = $totall;
+                 if(!empty($info)){
+
+                     while($i<count($info))
+                     {
+                         $totall = $totall + $info[$i]["totalprice"];
+                         
+                         $i++;
+                         $_SESSION['amount'] = $totall;
+                        }
                     }
-                 ?>
+                        ?>
     TOTAL AMOUNT:
     <input type="text" value="<?php echo $totall; ?>" readonly name="total"/> 
-<button class="btn btn-success" type="submit"  name="home" ><a href="payment.php">Payment</button>
+<button class="btn btn-success" type="submit"  name="home" value="sub" >Payment</button>
 <button class="btn btn-success" type="submit" style="margin-right: 2px;"  name="book" ><a href="category_index.php">Cancel</button>
 
 </form>    

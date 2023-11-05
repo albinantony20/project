@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><!-- Basic -->
+<?php include('userheader2.php');?>
 <head>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">   
@@ -39,7 +40,7 @@
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="container">
 				<a class="navbar-brand" href="index.php">
-					<img src="../all_user_assets/images/logo.jpg" alt="" />
+				<img width="150" src="../all_user_assets/images/logo1.png" alt="" />
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
 				  <span class="navbar-toggler-icon"></span>
@@ -66,7 +67,7 @@
 						</li>-->
 						<li class="nav-item"><a class="nav-link" href="login.php">login</a></li>
 						<li class="nav-item"><a class="nav-link" href="category_index.php">Booking</a></li>
-						<li class="nav-item"><a class="nav-link" href="login.php">cancellation</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">cancellation</a></li>
 					</ul>
 				</div>
 			</div>

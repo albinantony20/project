@@ -42,7 +42,7 @@ $name=$_SESSION['username'] ;
 
  
 
-$sql = "SELECT * FROM booking WHERE status=1 and uemail='$name'";
+$sql = "SELECT * FROM booking WHERE status=3 and uemail='$name'";
 $result = $conn->query($sql);
 
 
