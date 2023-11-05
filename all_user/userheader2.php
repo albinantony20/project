@@ -7,8 +7,8 @@
 <meta name="keywords" content="Resort Inn Responsive , Smartphone Compatible web template , Samsung, LG, Sony Ericsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- //for-mobile-apps -->
-<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- //for-mobile-apps
+<link href="assets/css/bootstrap.css" rel="stylesheet" type="" media="all" /> -->
 <link href="assets/css/font-awesome.css" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/chocolat.css" type="text/css" media="screen">
 <link href="assets/css/easy-responsive-tabs.css" rel='stylesheet' type='text/css'/>

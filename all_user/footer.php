@@ -4,7 +4,7 @@
 			<div class="row">
 				<div class="col-lg-3 col-md-6">
 					<h3>About Us</h3>
-					<p>Amala catering Services is a partnership firm providing healthy, tasty and good quality foods and related services with the blessings of Almighty Lord. If you are planning to serve healthy and tasty foods to your guests in your favourite occasions, here is everything you need. We are following traditional cooking policies and practices and maintaining hygiene at all areas of work. We are ensuring happy, peacefull and tension less occasions by providing customised and timely services.</p>
+					<p>Heavens Catering Services is a partnership firm providing healthy, tasty and good quality foods and related services with the blessings of Almighty Lord. If you are planning to serve healthy and tasty foods to your guests in your favourite occasions, here is everything you need. We are following traditional cooking policies and practices and maintaining hygiene at all areas of work. We are ensuring happy, peacefull and tension less occasions by providing customised and timely services.</p>
 				</div>
 				<div class="col-lg-3 col-md-6"><!--
 					<h3>Opening hours</h3>
@@ -16,8 +16,8 @@
 				<div class="col-lg-3 col-md-6">
 					<h3>Contact information</h3>
 					<p class="lead">Angamaly, Ernakulam, Kerala 683572</p>
-					<p class="lead"><a href="#">+91 999999999</a></p>
-					<p><a href="#"> amalacatering@gmail.com</a></p>
+					<p class="lead"><a href="#">+91 9746573474</a></p>
+					<p><a href="#"> heavenscaterers@gmail.com</a></p>
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<h3>Subscribe</h3>

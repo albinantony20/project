@@ -121,8 +121,26 @@
                      </li>
 
                      
-                      <li><a href="rptbookingdate.php"><i class="fa fa-bar-chart-o green_color"></i> <span>Datewise Report</span></a></li>
-                      <li><a href="viewbooking.php"><i class="fa fa-table purple_color2"></i> <span>View Booking</span></a></li>
+                     
+                      
+                      <li class="active">
+                        
+                        <a href="#orders" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-bar-chart-o purple_color2"></i> <span>View Orders</span></a>
+                        <ul class="collapse list-unstyled" id="orders">
+                           <li>
+                              <a href="viewbooking.php">> <span>Pending Orders</span></a>
+                           </li>
+                           <li>
+                              <a href="viewbooking2.php">> <span>Delivered Orders</span></a>
+                           </li>
+                           <li>
+                              <a href="cancel.php">> <span>Cancelled Orders</span></a>
+                           </li>
+                        </ul>
+                     </li>
+
+                     <li><a href="rptbookingdate.php"><i class="fa fa-calendar green_color"></i> <span>Datewise Report</span></a></li>
+
                      <li><a href="logout.php"><i class="fa fa-clock-o orange_color"></i> <span>Logout</span></a></li>
                      
 <?php
@@ -202,9 +220,10 @@
                         <div class="right_topbar">
                            <div class="icon_info">
                               <ul>
-                                 <li><a href="#"><i class="fa fa-bell-o"></i><span class="badge">2</span></a></li>
-                                 <li><a href="#"><i class="fa fa-question-circle"></i></a></li>
-                                 <li><a href="#"><i class="fa fa-envelope-o"></i><span class="badge">3</span></a></li>
+                              
+                                 <li><a href="viewbooking.php"><i class="fa fa-bell-o"></i><span class="badge">7</span></a></li>
+                                 
+                                 <li><a href="viewbooking2.php"><i class="fa fa-envelope-o"></i><span class="badge">8</span></a></li>
                               </ul>
                               <ul class="user_profile_dd">
                                  <li>
@@ -216,7 +235,7 @@
                                        <a class="dropdown-item" href="settings.html">Settings</a>
 */
 ?>
-                                       <a class="dropdown-item" href="index.php"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
+                                       <a class="dropdown-item" href="logout.php"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
                                        </div>
                                  </li>
                               </ul>

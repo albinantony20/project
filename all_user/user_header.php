@@ -1,6 +1,9 @@
-<!DOCTYPE html>
-<html lang="en"><!-- Basic -->
 <?php require('userheader2.php');?>
+<!DOCTYPE html>
+<html lang="en">
+	
+<!-- Basic -->
+
 <head>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">   
@@ -26,19 +29,14 @@
     <link rel="stylesheet" href="../all_user_assets/css/responsive.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../all_user_assets/css/custom.css">
-
+	
+	
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-
-
-
-
-	
 </head>
-
 <body>
 	<!-- Start header -->
 	<header class="top-navbar" style="height:136px;">
@@ -57,27 +55,12 @@
 						<li class="nav-item"><a class="nav-link" href="user_index.php">Booking</a></li>
 						<li class="nav-item"><a class="nav-link" href="balancepayment.php">Balance Payment</a></li>
 						<li class="nav-item"><a class="nav-link" href="feedback_view.php">Feed back</a></li>
-						
-						<!--<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Pages</a>
-							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="../user_assets/reservation.html">Reservation</a>
-								<a class="dropdown-item" href="../user_assets/stuff.html">Stuff</a>
-								<a class="dropdown-item" href="../user_assets/gallery.html">Gallery</a>
-							</div>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Blog</a>
-							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="../user_assets/blog.html">blog</a>
-								<a class="dropdown-item" href="../user_assets/blog-details.html">blog Single</a>
-							</div>
-						</li>-->
+
 						<li class="nav-item"><a class="nav-link" href="logout.php">logout</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 	</header>
-	<!-- End header -->
-	
+</body>
+</html>

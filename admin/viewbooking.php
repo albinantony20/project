@@ -19,21 +19,22 @@ $dao=new DataAccess();
                         </div>
                      </div>
 <div class="row column1">
-                        <div class="col-md-12">
+                        <div class="col-md-20">
                            <div class="white_shd full margin_bottom_30">
                               <div class="full graph_head">
                                  <div class="heading1 margin_0">
-                                    <h2>Pending</h2>
+                                    <h2>Pending Orders</h2>
                                  </div>
                               </div>
                               <div class="full price_table padding_infor_info">
                                  <div class="row">
-                                    <div class="col-lg-12">
+                                    <div class="col-lg-20">
                                        <div class="table-responsive-sm">
                                           <table class="table table-striped projects">
                                              <thead class="thead-dark">
                                                 <tr>
                                                    <th>S No</th>
+                                                   <th>Booking ID</th>
                                                    <th>User Name</th>
                                                    <th>Item Name</th>
                                                    <th>Item Price</th>
@@ -48,16 +49,17 @@ $dao=new DataAccess();
     
     $actions=array(
         
-        'success'=>array('label'=>'Success','link'=>'#','params'=>array('id'=>'bid'),'attributes'=>array('class'=>'btn btn-success')),
-    );
+        'Delivered'=>array('label'=>'Delivered','link'=>'success.php','params'=>array('id'=>'bid'),'attributes'=>array('class'=>'btn btn-success')),
+        'Cancel'=>array('label'=>'Cancel','link'=>'cancelbutton.php','params'=>array('id'=>'bid'),'attributes'=>array('class'=>'btn btn-success')),
+      );
 
     $config=array(
         'srno'=>true,
-        'hiddenfields'=>array('bid'),
+        
 
     );
 
-    $condition="status=3 order by bid desc";
+    $condition="status=3 order by bid";
     $join=array(
        
     ); 

@@ -1,28 +1,11 @@
-
-<?php
-
-?>
-
-
-	
-
-<?php
-// include("header.php");	
-?>
-
-
-
+<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <?php require('../config/autoload.php'); ?>
+
 
 <?php
 $dao=new DataAccess();
-
-
-
 ?>
 
-
-	
 <?php    
 if(isset($_SESSION['username']))
 { 
@@ -31,21 +14,16 @@ if(isset($_SESSION['username']))
 }else{
 
 	include("header.php");
-	
+		
 }
-
-?>
-<?php 
- //<h7 class="title-w3-agileits title-black-wthree"> ?>
-	<?php  //echo $name </h7> ?>
-
-
+?> 
 
 <div class="plans-section" id="rooms">
 				 <div class="container">
-			<br>
+			<br><br><br><br><br>
 				 <h3 class="title-w3-agileits title-black-wthree">CATEGORY</h3>
 						<div class="priceing-table-main">
+							
             <?php
 			
 			 $q="select * from category";
@@ -58,12 +36,13 @@ $info=$dao->query($q);
 			
 { $s=$info[$i]["cimage"];
 	
-		?>		 <div class="col-md-3 price-grid">
+		?>	
+			 <div class="col-md-3 price-grid">
 					<div class="price-block agile">
 						<div class="price-gd-top">
-						<img width="300px" src=<?php echo BASE_URL."uploads/".$info[$i]["cimage"]; ?> alt=" " class="img-responsive" />
+						<img width="300"; height="300" src=<?php echo BASE_URL."uploads/".$info[$i]["cimage"]; ?> alt=" " class="img-responsive" />
 							<?php /*?> <h4>Deluxe Room</h4><?php */?>
-                              <h4><?php echo $info[$i]["cname"]?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4> 
+                              <h4><?php echo $info[$i]["cname"]?></h4> 
                               <br><br><br><h4></h4> 
 							
                              

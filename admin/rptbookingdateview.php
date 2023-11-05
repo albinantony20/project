@@ -38,6 +38,7 @@ $date1=$_SESSION['fdate'] ;
                                              <thead class="thead-dark">
                                                 <tr>
                                                    <th>S No</th>
+                                                   <th>Booking ID</th>
                                                    <th>Item  Name</th>
                                                    <th>Booking Date</th>
                                                    <th>Order Date</th>
@@ -55,12 +56,12 @@ $date1=$_SESSION['fdate'] ;
 
     $config=array(
         'srno'=>true,
-        'hiddenfields'=>array('bid')
+        
         
         
     );
 
-   $condition="bookingdate>='".$date1."' and status=3";
+   $condition="orderdate>='".$date1."' and status=3";
    
    $join=array(
        
