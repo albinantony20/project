@@ -1,7 +1,9 @@
 
 <?php require('../config/autoload.php');?>
+<?php require('../config/autoload.php');?>
 <?php
 include('user_header.php');
+
 
 
 include("dbcon.php");
@@ -69,6 +71,7 @@ if(isset($_POST['home']))
 
     );
 
+    $condition=" uemail='".$_SESSION['username']."' and status=1";
     $condition=" uemail='".$_SESSION['username']."' and status=1";
     $join=array(
        
