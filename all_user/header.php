@@ -85,17 +85,7 @@
 						<li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
 						<li class="nav-item"><a class="nav-link" href="category_index.php">Menu</a></li>
 						<li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
-						
-						<!--<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Pages</a>
-							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="../user_assets/reservation.html">Reservation</a>
-								<a class="dropdown-item" href="../user_assets/stuff.html">Stuff</a>
-								<a class="dropdown-item" href="../user_assets/gallery.html">Gallery</a>
-							</div>
-						</li>-->
 						<li class="nav-item dropdown">
-
 							<a onclick="navigateToPHP()" class="nav-link dropdown-toggle" href="login.php" id="dropdown-a" data-toggle="dropdown">Login</a>
 							<div class="dropdown-content" aria-labelledby="dropdown-a">
 							<a class="dropdown-item" href="register.php">New Customer?&nbsp;Sign Up</a>
@@ -108,9 +98,6 @@
     window.location.href = 'login.php'; 
   }
 </script>
-
-</body>
-</html>
 						
 						
 					</ul>

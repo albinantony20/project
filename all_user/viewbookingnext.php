@@ -1,6 +1,6 @@
 
 <?php require('../config/autoload.php');?>
-<?php require('../config/autoload.php');?>
+
 <?php
 include('user_header.php');
 

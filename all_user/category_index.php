@@ -42,7 +42,7 @@ $info=$dao->query($q);
 						<div class="price-gd-top">
 						<img width="300"; height="300" src=<?php echo BASE_URL."uploads/".$info[$i]["cimage"]; ?> alt=" " class="img-responsive" />
 							<?php /*?> <h4>Deluxe Room</h4><?php */?>
-                              <h4><?php echo $info[$i]["cname"]?></h4> 
+                              <h4><?php echo $info[$i]["cname"]?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4> 
                               <br><br><br><h4></h4> 
 							
                              
@@ -68,9 +68,13 @@ $info=$dao->query($q);
 				<?php 
 				$i++;
 				} ?>
+				<br><br>
 				<div class="clearfix"> </div><h3><center>
-				 <a href="special_index.php" >Special Foods>>></a></h3></center><br><br>
+				<br><br><br>
+				<a href="special_index.php" >Explore Special Foods</a></h3></center><br><br>
+				
 			</div>
+			<br>
 		</div>
 	</div>
 	
@@ -85,44 +89,3 @@ $info=$dao->query($q);
 	</div>
 	<!-- End Menu -->
 	
-	
-	
-	<!-- Start Contact info -->
-	<div class="contact-imfo-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					<i class="fa fa-volume-control-phone"></i>
-					<div class="overflow-hidden">
-						<h4>Phone</h4>
-						<p class="lead">
-							+9198470111
-						</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<i class="fa fa-envelope"></i>
-					<div class="overflow-hidden">
-						<h4>Email</h4>
-						<p class="lead">
-							heavenscatering@gmail.com
-						</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<i class="fa fa-map-marker"></i>
-					<div class="overflow-hidden">
-						<h4>Location</h4>
-						<p class="lead">
-							 Angamaly,Aluva Rd Kerala 683587
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Contact info -->
-	
-<?php
-include('user_footer.php');
-?>  

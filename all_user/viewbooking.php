@@ -3,28 +3,23 @@
 <?php
 include('user_header.php');
 ?>
-
-
 <?php
 $dao=new DataAccess();
-
 $name=$_SESSION['username'];
-
 ?>
 <?php include('userheader2.php'); ?>
 
-    
+<br><br><br><br><br>
     <div class="container_gray_bg" id="home_feat_1">
     <div class="container">
     	<div class="row">
             <div class="col-md-12">
-                <table  border="1" class="table" style="margin-top:100px;">
+                <table  border="1" class="table" style="margin-top:25px;">
                     <tr>
                         <h1><center> CART</center></h1>
                         
                         <th>SR NO</th>
-                        <th>USERNAME</th>
-                        <th>ITEM ID</th>
+
                         <th>ITEM NAME</th>
                         <th>PRICE</th>
                        
@@ -44,7 +39,8 @@ $name=$_SESSION['username'];
 
     $config=array(
         'srno'=>true,
-        'hiddenfields'=>array('bid'),
+        'hiddenfields'=>array('bid','uemail','iid'), 
+
 
     );
 
@@ -66,9 +62,9 @@ $name=$_SESSION['username'];
                 </table>
             </div>    
             <form action="" method="POST" enctype="multipart/form-data">
-
-<button class="btn btn-success" type="submit"  name="home" ><a href="viewbookingnext.php">Next</button>
-<button class="btn btn-success" type="submit" style="margin-right: 2px;"  name="book" ><a href="category_index.php">New Item</button>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-success" type="submit"  name="home" ><a href="viewbookingnext.php">Next</button>
+&nbsp;&nbsp;&nbsp;<button class="btn btn-success" type="submit" style="margin-right: 2px;"  name="book" ><a href="category_index.php">New Item</button>
 
 </form>    
             

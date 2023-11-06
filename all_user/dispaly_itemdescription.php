@@ -1,5 +1,5 @@
 
-
+<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <?php require('../config/autoload.php'); ?>
 <?php //include("user_header.php");	?>
 
@@ -26,7 +26,7 @@ if(isset($_SESSION['username']))
 
 <div class="plans-section" id="rooms">
 				 <div class="container">
-<?php  ?>
+				 <br><br><br><br><br>
 <h3 class="title-w3-agileits title-black-wthree">ITEMS</h3>
 						<div class="priceing-table-main">
             <?php
@@ -43,10 +43,10 @@ $info=$dao->query($q);
 					<div class="price-block agile">
 
 						<div class="price-gd-top">
-						<img style="width:300; height:300" src=<?php echo BASE_URL."uploads/".$info[$i]["item_image"]; ?> alt=" " class="img-responsive" />
+						<img  src=<?php echo BASE_URL."uploads/".$info[$i]["item_image"]; ?> alt=" " class="img-responsive" />
 							<?php /*?> <h4>Deluxe Room</h4><?php */?>
 <h4>Item name:  </h4>
-                              <h4><?php echo $info[$i]["item_name"]?></h4> 
+                              <h4><?php echo $info[$i]["item_name"]?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4> 
                               <br><br><br><br><br><br><br>
                              
 						</div>
@@ -65,7 +65,7 @@ $info=$dao->query($q);
 							</div>
 							<div class="price-selet">
                             
-			<a href="itembooking.php?id=<?= $info[$i]["item_id"]?>" >BOOK NOW</a>
+			<a href="itembooking.php?id=<?= $info[$i]["item_id"]?>" >SELECT</a>
 		
 							</div>
 						</div>
@@ -74,7 +74,13 @@ $info=$dao->query($q);
 				<?php 
 				$i++;
 				} ?>
-				<div class="clearfix"> </div>
+								<br><br>
+				<div class="clearfix"> </div><h3><center>
+				<br><br><br>
+				<a href="special_index.php" >Explore Special Foods</a></h3></center><br><br>
+				
+			</div>
+			<br>
 			</div>
 		</div>
 	</div>

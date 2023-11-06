@@ -1,4 +1,4 @@
-
+<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <?php require('../config/autoload.php'); ?>
 <?php
 //include('user_header.php');
@@ -56,14 +56,16 @@ $info=$dao->query($q);
 		?>		 <div class="col-md-3 price-grid">
 					<div class="price-block agile">
 						<div class="price-gd-top">
-						<img style="width:300; height:300" src=<?php echo BASE_URL."uploads/".$info[$i]["spimage"]; ?> alt=" " class="img-responsive" />
+						<img src=<?php echo BASE_URL."uploads/".$info[$i]["spimage"]; ?> alt=" " class="img-responsive" />
 							<?php /*?> <h4>Deluxe Room</h4><?php */?>
-                              <h4><?php echo $info[$i]["spname"]?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4> 
-                              <br><br><br><h4><?php echo $info[$i]["spprice"]?></h4> 
+                              <h4><?php echo $info[$i]["spname"]?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4> 
+                              <br><br><br>
 							
                              
 						</div>
 						<div class="price-gd-bottom"><br><br><br><br><br> 
+						<h4><center>Rate: <?php echo $info[$i]["spprice"]?> /plate</center></h4>
+
 							   <div class="price-list">
 									<ul>
 											<li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -76,7 +78,7 @@ $info=$dao->query($q);
 							</div>
 							<div class="price-selet">
                             
-			<a href="dispaly_itemdescription.php?id=<?= $info[$i]["spid"]?>" >VIEW</a>
+							<a href="spclbooking.php?id=<?= $info[$i]["spid"]?>" >SELECT</a>
 							</div>
 						</div>
 					</div>
@@ -85,59 +87,13 @@ $info=$dao->query($q);
 				$i++;
 				} ?>
 				<div class="clearfix"> </div>
+				<br><br>
 			</div>
 		</div>
 	</div>
 	
-	
-		<?php //include("footer.php");	?>
-	
-					</div>
-				</div>
-				
-			</div>
-		</div>
-	</div>
-	<!-- End Menu -->
+
 	
 	
 	
-	<!-- Start Contact info -->
-	<div class="contact-imfo-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					<i class="fa fa-volume-control-phone"></i>
-					<div class="overflow-hidden">
-						<h4>Phone</h4>
-						<p class="lead">
-							+9198470111
-						</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<i class="fa fa-envelope"></i>
-					<div class="overflow-hidden">
-						<h4>Email</h4>
-						<p class="lead">
-							catering@gmail.com
-						</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<i class="fa fa-map-marker"></i>
-					<div class="overflow-hidden">
-						<h4>Location</h4>
-						<p class="lead">
-							 Nedumbassery, Kerala 683587
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Contact info -->
 	
-<?php
-include('user_footer.php');
-?>  

@@ -1,7 +1,6 @@
-<?php require('userheader2.php');?>
 <!DOCTYPE html>
 <html lang="en">
-	
+
 <!-- Basic -->
 
 <head>
@@ -12,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
  
      <!-- Site Metas -->
-    <title> CATERING</title>  
+    <title>Heavens Caterers</title>  
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -30,37 +29,78 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../all_user_assets/css/custom.css">
 	
-	
+
+	<?php require('userheader2.php');?>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+	<style>
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+	  
+
+
+    }
+
+	.dropdown-item:hover {
+      background-color: #d0a772; /* Change the background color when mouse is placed over the dropdown menu */
+	}
+
+  </style>
 </head>
+
 <body>
 	<!-- Start header -->
-	<header class="top-navbar" style="height:136px;">
+	<header class="top-navbar">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="container">
 				<a class="navbar-brand" href="index.php">
-				<img width="150" src="../all_user_assets/images/logo1.png" alt="" />
+				<img width="115" src="../all_user_assets/images/heavens.png" alt="" />
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
 				  <span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbars-rs-food">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
-						<li class="nav-item"><a class="nav-link" href="cancellation.php">Cancel Order</a></li>
-						<li class="nav-item"><a class="nav-link" href="user_index.php">Booking</a></li>
-						<li class="nav-item"><a class="nav-link" href="balancepayment.php">Balance Payment</a></li>
-						<li class="nav-item"><a class="nav-link" href="feedback_view.php">Feed back</a></li>
+						<li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="category_index.php">Menu</a></li>
+						<li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
+						<li class="nav-item dropdown">
+							<a onclick="navigateToPHP()" class="nav-link dropdown-toggle" href="logout.php" id="dropdown-a" data-toggle="dropdown">
+<?php 
+if(isset($_SESSION['username']))
+{ 
+   $name=$_SESSION['username'];
+?>
 
-						<li class="nav-item"><a class="nav-link" href="logout.php">logout</a></li>
+ <h7 class="title-w3-agileits title-black-wthree"><?php  echo $name ?></h7>
+
+<?php } ?></a>
+							<div class="dropdown-content" aria-labelledby="dropdown-a">
+							<a class="dropdown-item" href="#">My Orders</a>
+							</div>
+
 					</ul>
 				</div>
 			</div>
 		</nav>
 	</header>
+	<a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 </body>
 </html>

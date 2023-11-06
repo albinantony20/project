@@ -61,10 +61,10 @@ if(!isset($_SESSION['username']))
   { 
     $uemail=$_SESSION['username'];
     $iid = $_GET['id'];
-    $q="select * from item where item_id=".$iid ;
+    $q="select * from special where spid=".$iid ;
     $info1=$dao->query($q);
-    $iname=$info1[0]["item_name"];
-    $price=$info1[0]["item_price"];
+    $iname=$info1[0]["spname"];
+    $price=$info1[0]["spprice"];
     $quantity=$_POST["qty"];
     $totalprice=$_POST["total"];
     $_SESSION['amount']=$totalprice;
@@ -94,10 +94,10 @@ if(!isset($_SESSION['username']))
   { 
     $uemail=$_SESSION['username'];
     $iid = $_GET['id'];
-    $q="select * from item where item_id=".$iid ;
+    $q="select * from special where spid=".$iid ;
     $info1=$dao->query($q);
-    $iname=$info1[0]["item_name"];
-    $price=$info1[0]["item_price"];
+    $iname=$info1[0]["spname"];
+    $price=$info1[0]["spprice"];
     $quantity=$_POST["qty"];
     $totalprice=$_POST["total"];
     $_SESSION['amount']=$totalprice;
@@ -124,7 +124,7 @@ $dao=new DataAccess();
 ?>
 
 <?php	$iid=$_GET['id']; 
-	 $q="select * from item where item_id=".$iid ;
+	 $q="select * from special where spid=".$iid ;
     $info=$dao->query($q);
   
 ?>
@@ -146,37 +146,37 @@ if(isset($_SESSION['username']))
 
 <?php } ?>
             <h3>Product Details</h3>
-            <img width="540" src=<?php echo BASE_URL."uploads/".$info[0]["item_image"]; ?> alt=" ">
+            <img width="540" src=<?php echo BASE_URL."uploads/".$info[0]["spimage"]; ?> alt=" ">
         
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12">
             <div class="inner-column">
         <form action="" method="POST" enctype="multipart/form-data">
-            
+            <br>
             <h3>Details</h3>
             <div class="form-group">
                 <label for="name">Item Name:</label><br>
-                <input id="iname" name="Item Name" type="text" value="<?php echo $info[0]["item_name"];?>"  readonly style="margin-top: 8px;"><br>
+                <input id="iname" name="Item Name" type="text" value="<?php echo $info[0]["spname"];?>"  readonly style="margin-top: 8px;"><br>
             </div>
             <div class="form-group">
-                <label for="Total">Price:</label><br>
-                <input id="price" name="price" type="text" value="<?php echo $info[0]["item_price"];?>"  readonly style="margin-top: 8px;"><br>
+                <label for="Total">Price: </label><br>
+                <input id="price" name="price" type="text" value="<?php echo $info[0]["spprice"];?>"  readonly style="margin-top: 8px;"><br>
             </div>
             <div class="form-group">
-                <label for="quantity">Quantity:</label><br>
+                <label for="quantity">Quantity: </label><br>
                 <input id="qty" name="qty" type="text" onkeyup="showtotal()"  style="margin-top: 8px;"><br>
             </div>
             <div class="form-group">
-                <label for="totalprice">Total Price:</label><br>
+                <label for="totalprice">Total Price: </label><br>
                 <input id="total" name="total" type="text"  style="margin-top: 8px;"><br>
             </div>
             <div class="form-group">
-                <label for="">Order Date:</label><br>
+                <label for="">Order Date</label><br>
                 <input id="orderdate" name="orderdate" type="date"   style="margin-top: 8px;"><br>
             </div>
             <br>
                     <button type="submit" class="btn btn-success" name="btn_insert">Add to Cart</button>
-                   <!-- <button type="submit" class="btn btn-success" name="book_now">Book Now</button> -->
+                   <!--<button type="submit" class="btn btn-success" name="book_now">Book Now</button>-->
             </form>      
         </div>
         </div>
