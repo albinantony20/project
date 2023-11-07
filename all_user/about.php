@@ -23,6 +23,8 @@ if(isset($_SESSION['username']))
 <br>
 <br>
 <br>
+<br>
+<br>
 
 	<div class="about-section-box">
 		<div class="container">
@@ -45,42 +47,4 @@ if(isset($_SESSION['username']))
 	</div>
 	<!-- End About -->
 
-    <!-- Start Contact info -->
-	<div class="contact-imfo-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					<i class="fa fa-volume-control-phone"></i>
-					<div class="overflow-hidden">
-						<h4>Phone</h4>
-						<p class="lead">
-							+919746573474
-						</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<i class="fa fa-envelope"></i>
-					<div class="overflow-hidden">
-						<h4>Email</h4>
-						<p class="lead">
-							heavenscaterers@gmail.com
-						</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<i class="fa fa-map-marker"></i>
-					<div class="overflow-hidden">
-						<h4>Location</h4>
-						<p class="lead">
-							Angamaly-Aluva Rd, Angamaly, Ernakulam Kerala 683572
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Contact info -->
-	
-<?php
-include('footer.php');
-?>  
+    

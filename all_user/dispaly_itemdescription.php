@@ -31,7 +31,7 @@ if(isset($_SESSION['username']))
 						<div class="priceing-table-main">
             <?php
 			$item_id=$_GET['id']; 
-			 $q="select * from item where cid=".$item_id ;
+			 $q="select * from item where status=1 and cid=".$item_id ;
 
 $info=$dao->query($q);
 
@@ -45,7 +45,7 @@ $info=$dao->query($q);
 						<div class="price-gd-top">
 						<img  src=<?php echo BASE_URL."uploads/".$info[$i]["item_image"]; ?> alt=" " class="img-responsive" />
 							<?php /*?> <h4>Deluxe Room</h4><?php */?>
-<h4>Item name:  </h4>
+
                               <h4><?php echo $info[$i]["item_name"]?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4> 
                               <br><br><br><br><br><br><br>
                              

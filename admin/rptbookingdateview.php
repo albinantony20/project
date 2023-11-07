@@ -61,7 +61,7 @@ $date1=$_SESSION['fdate'] ;
         
     );
 
-   $condition="orderdate>='".$date1."' and status=3";
+   $condition="bookingdate>='".$date1."' and status=3";
    
    $join=array(
        

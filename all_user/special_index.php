@@ -43,7 +43,7 @@ if(isset($_SESSION['username']))
 						<div class="priceing-table-main">
             <?php
 			
-			 $q="select * from special";
+			 $q="select * from special where status=1";
 
 $info=$dao->query($q);
 //print_r($info);

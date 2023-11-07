@@ -26,7 +26,7 @@ if(isset($_SESSION['username']))
 							
             <?php
 			
-			 $q="select * from category";
+			 $q="select * from category where status=1";
 
 $info=$dao->query($q);
 //print_r($info);

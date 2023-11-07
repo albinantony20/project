@@ -152,7 +152,7 @@ if(isset($_SESSION['username']))
         <div class="col-lg-6 col-md-6 col-sm-12">
             <div class="inner-column">
         <form action="" method="POST" enctype="multipart/form-data">
-            
+            <br>
             <h3>Details</h3>
             <div class="form-group">
                 <label for="name">Item Name:</label><br>
@@ -164,19 +164,19 @@ if(isset($_SESSION['username']))
             </div>
             <div class="form-group">
                 <label for="quantity">Quantity:</label><br>
-                <input id="qty" name="qty" type="text" onkeyup="showtotal()"  style="margin-top: 8px;"><br>
+                <input id="qty" name="qty" type="text" min="1" onkeyup="showtotal()"  style="margin-top: 8px;" onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;"><br>
             </div>
             <div class="form-group">
                 <label for="totalprice">Total Price:</label><br>
-                <input id="total" name="total" type="text"  style="margin-top: 8px;"><br>
+                <input id="total" name="total" type="text" readonly style="margin-top: 8px;"><br>
             </div>
             <div class="form-group">
                 <label for="">Order Date:</label><br>
-                <input id="orderdate" name="orderdate" type="date"   style="margin-top: 8px;"><br>
+                <input id="orderdate" name="orderdate" type="date" required min=<?= date('Y-m-d') ?> style="margin-top: 8px;"><br>
             </div>
             <br>
-                    <button type="submit" class="btn btn-success" name="btn_insert">Add to Cart</button>
-                   <!-- <button type="submit" class="btn btn-success" name="book_now">Book Now</button> -->
+                  
+                   <button type="submit" class="btn btn-success" name="btn_insert">Add to Cart</button>
             </form>      
         </div>
         </div>

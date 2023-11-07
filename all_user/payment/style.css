@@ -101,11 +101,11 @@ body {
 }
 
 .step:nth-child(1):before {
-  content: 'Delivery';
+  content: 'Login';
 }
 .step:nth-child(2):before {
   right: -40px;
-  content: 'Confirmation';
+  content: 'Order';
 }
 .step:nth-child(3):before {
   right: -30px;

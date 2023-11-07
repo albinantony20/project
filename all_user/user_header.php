@@ -82,7 +82,7 @@
 						<li class="nav-item"><a class="nav-link" href="category_index.php">Menu</a></li>
 						<li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
 						<li class="nav-item dropdown">
-							<a onclick="navigateToPHP()" class="nav-link dropdown-toggle" href="logout.php" id="dropdown-a" data-toggle="dropdown">
+							<a onclick="navigateToPHP()" class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">
 <?php 
 if(isset($_SESSION['username']))
 { 
@@ -93,7 +93,9 @@ if(isset($_SESSION['username']))
 
 <?php } ?></a>
 							<div class="dropdown-content" aria-labelledby="dropdown-a">
-							<a class="dropdown-item" href="#">My Orders</a>
+							<a class="dropdown-item" href="vieworder.php">My Orders</a>
+              <a class="dropdown-item" href="cancelorder.php">Cancelled Orders</a>
+              <a class="dropdown-item" href="logout.php">Log Out</a>
 							</div>
 
 					</ul>

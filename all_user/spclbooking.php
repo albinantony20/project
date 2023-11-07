@@ -164,15 +164,15 @@ if(isset($_SESSION['username']))
             </div>
             <div class="form-group">
                 <label for="quantity">Quantity: </label><br>
-                <input id="qty" name="qty" type="text" onkeyup="showtotal()"  style="margin-top: 8px;"><br>
+                <input id="qty" name="qty" type="text" onkeyup="showtotal()"  style="margin-top: 8px;"onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;"><br>
             </div>
             <div class="form-group">
                 <label for="totalprice">Total Price: </label><br>
-                <input id="total" name="total" type="text"  style="margin-top: 8px;"><br>
+                <input id="total" name="total" type="text" readonly style="margin-top: 8px;"><br>
             </div>
             <div class="form-group">
                 <label for="">Order Date</label><br>
-                <input id="orderdate" name="orderdate" type="date"   style="margin-top: 8px;"><br>
+                <input id="orderdate" name="orderdate" type="date" min=<?= date('Y-m-d') ?>  style="margin-top: 8px;"><br>
             </div>
             <br>
                     <button type="submit" class="btn btn-success" name="btn_insert">Add to Cart</button>

@@ -20,7 +20,7 @@ $labels=array("fdate"=>"from Date");
 
 $rules=array(
     
-    "fdate"=>array('required'=>true,'date'=>array('from'=>'today','to'=>'+30 days 12 am')),
+    "fdate"=>array('required'=>true),
     
  
 

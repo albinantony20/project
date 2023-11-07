@@ -19,9 +19,8 @@ if(isset($_POST['signin']))
 		{
 		$_SESSION['username']=$info['username'];
         $_SESSION['uemail']=$info['username'];
-        if(isset($_SESSION['view']))
-        header('location:category_index.php');
-		header('location:index.php');
+        if(isset($_SESSION['view'])) header('location:category_index.php');
+		header('location:category_index.php');
 		}
 		else
 		{

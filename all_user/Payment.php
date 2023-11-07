@@ -1,9 +1,8 @@
-﻿<!DOCTYPE html>
+﻿<?php include("../config/autoload.php"); ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<?php include("dbcon.php"); 
-session_start();
-?>
+<?php include("dbcon.php"); ?>
 	<script type="text/javascript">
 function validations()
 {
@@ -75,9 +74,17 @@ return false;
 <?php
 if(isset($_POST["next"]))
 {
-	
-	 header('location:printbill.php');
-	
+	$dao=new DataAccess();
+$name=$_SESSION['username'];
+ $bid = $_SESSION['uemail'];
+
+ $data=array(
+    'status'=>3
+ );
+ // $sql = "update booking set status=6 where status=1 and  uemail=".$bid;
+ $dao->update($data,'booking','status=6 and  uemail="'.$bid.'"');
+ 
+ echo "<script>location.replace('printbill.php');</script>";
 	 }
 
 
@@ -87,9 +94,7 @@ if(isset($_POST["next"]))
 	<form action=""  method="POST" onSubmit="return validations();"   enctype="multipart/form-data">
   <div class="checkout-panel">
     <div class="panel-body">
-      <br>
-      <br>
-      <h2 class="title"><b>CHECKOUT</h2>
+      <h2 class="title"><b>PAYMENT</h2>
 
       <div class="progress-bar">
         <div class="step active"></div>
@@ -141,8 +146,8 @@ $amt= $_SESSION['amount'];
           <div class="small-inputs">
             <div>
               <label for="date">Valid thru</label>
-              <input type="text" id="date" name="Cmm" placeholder="MM " /> 
-	      <input type="text" id="Cyy" placeholder= "YY" />
+              <input type="text" id="date" maxlength=2 name="Cmm" placeholder="MM "  onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;"/> 
+	      <input type="text" id="Cyy" maxlength=2 placeholder= "YY"  onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;"/>
 
             </div>
 
@@ -150,14 +155,14 @@ $amt= $_SESSION['amount'];
 
             <div>
               <label for="verification">CVV / CVC *</label>
-              <input type="password" name="cvv" id="verification"/>
+              <input type="text" name="cvv" maxlength=3 id="verification" onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;"/>
             </div>
           </div>
 
         </div>
         <div class="column-2">
           <label for="cardnumber">Card Number</label>
-          <input type="password" name="Cnum"id="cardnumber"/>
+          <input type="text" name="Cnum"  maxlength=16 id="cardnumber" onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false;"/>
 
           <span class="info">* CVV or CVC is the card security code, unique three digits number on the back of your card separate from its number.</span>
 
