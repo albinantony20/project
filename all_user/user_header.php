@@ -93,7 +93,8 @@ if(isset($_SESSION['username']))
 
 <?php } ?></a>
 							<div class="dropdown-content" aria-labelledby="dropdown-a">
-							<a class="dropdown-item" href="vieworder.php">My Orders</a>
+              <a class="dropdown-item" href="vieworder2.php">Pending Orders</a>
+							<a class="dropdown-item" href="vieworder.php">Confirmed Orders</a>
               <a class="dropdown-item" href="cancelorder.php">Cancelled Orders</a>
               <a class="dropdown-item" href="logout.php">Log Out</a>
 							</div>

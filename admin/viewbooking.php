@@ -19,7 +19,7 @@ $dao=new DataAccess();
                         </div>
                      </div>
 <div class="row column1">
-                        <div class="col-md-20">
+                        <div class="col-md-">
                            <div class="white_shd full margin_bottom_30">
                               <div class="full graph_head">
                                  <div class="heading1 margin_0">
@@ -49,7 +49,8 @@ $dao=new DataAccess();
     
     $actions=array(
         
-        'Delivered'=>array('label'=>'Delivered','link'=>'success.php','params'=>array('id'=>'bid'),'attributes'=>array('class'=>'btn btn-success')),
+        'Take Order'=>array('label'=>'Take Order','link'=>'success.php','params'=>array('id'=>'bid'),'attributes'=>array('class'=>'btn btn-success')),
+        
         'Cancel'=>array('label'=>'Cancel','link'=>'cancelbutton.php','params'=>array('id'=>'bid'),'attributes'=>array('class'=>'btn btn-success')),
       );
 
