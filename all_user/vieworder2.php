@@ -47,7 +47,7 @@ $name=$_SESSION['username'];
 
     );
 
-    $condition=" uemail='".$name."' and status=4";
+    $condition=" uemail='".$name."' and status=3";
     $join=array(
        
     ); 
